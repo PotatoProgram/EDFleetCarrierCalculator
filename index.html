@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <h1> Elite Dangerous Fleet Carrier Calculator</h1>
+    <h3>Select services:</h3>
+    <form id="services">
+      
+        <p>Refuel/Refuel Station</p>
+           <input type="radio" id="refuelOff" name="refuel" value="off" checked="true">
+        <label for="refuelOff">Off</label>
+        <input type="radio" id="refuelSusp" name="refuel" value="suspended">
+        <label for="refuelOnline">Suspended</label>
+        <input type="radio" id="refuelOnline" name="refuel" value="Online">
+        <label for="refuelSusp">Online</label>
+      </form>
+      <form id="repair">
+        <p>Repair/Repair Crews</p>
+           <input type="radio" id="repairOff" name="repair" value="off" checked="true">
+        <label for="repairOff">Off</label>
+        <input type="radio" id="repairSusp" name="repair" value="suspended">
+        <label for="repairOnline">Suspended</label>
+        <input type="radio" id="repairOnline" name="repair" value="Online">
+        <label for="repairSusp">Online</label>
+      </form>
+      <button id="updater">Update Values</button>
+    
+    
+    
+    
+    
+    <p>Upkeep: <span id="upkeepTotal"></span> cr
+    <script src="sketch.js"></script>
+  
+
+</p></body></html>
