@@ -11,23 +11,59 @@
     <h1> Elite Dangerous Fleet Carrier Calculator</h1>
     <h3>Select services:</h3>
     <form id="services">
-      <form id="refuel">
+      <form>
         <p>Refuel/Refuel Station</p>
-           <input type="radio" id="refuelOff" name="refuel" value="off" checked="true">
+           <input type="radio" id="refuelOff" name="refuel" checked="true">
         <label for="refuelOff">Off</label>
-        <input type="radio" id="refuelSusp" name="refuel" value="suspended">
+        <input type="radio" id="refuelSusp" name="refuel">
         <label for="refuelOnline">Suspended</label>
-        <input type="radio" id="refuelOn" name="refuel" value="Online">
+        <input type="radio" id="refuelOn" name="refuel" >
         <label for="refuelSusp">Online</label>
       </form>
-      <form id="repair">
+      <form>
         <p>Repair/Repair Crews</p>
-           <input type="radio" id="repairOff" name="repair" value="off" checked="true">
+           <input type="radio" id="repairOff" name="repair" checked="true">
         <label for="repairOff">Off</label>
-        <input type="radio" id="repairSusp" name="repair" value="suspended">
+        <input type="radio" id="repairSusp" name="repair">
         <label for="repairOnline">Suspended</label>
-        <input type="radio" id="repairOn" name="repair" value="Online">
+        <input type="radio" id="repairOn" name="repair">
         <label for="repairSusp">Online</label>
+      </form>
+      <form>
+        <p>Restock/Armoury</p>
+           <input type="radio" id="restockOff" name="restock" checked="true">
+        <label for="restockOff">Off</label>
+        <input type="radio" id="restockSusp" name="restock">
+        <label for="restockOnline">Suspended</label>
+        <input type="radio" id="restockOn" name="restock">
+        <label for="restockSusp">Online</label>
+      </form>
+      <form>
+        <p>Redemption Office</p>
+           <input type="radio" id="intFacOff" name="intFac" checked="true">
+        <label for="intFacOff">Off</label>
+        <input type="radio" id="intFacSusp" name="intFac">
+        <label for="intFacOnline">Suspended</label>
+        <input type="radio" id="intFacOn" name="intFac" >
+        <label for="intFacSusp">Online</label>
+      </form>
+      <form>
+        <p>Shipyard</p>
+           <input type="radio" id="shipyardOff" name="shipyard" checked="true">
+        <label for="shipyardOff">Off</label>
+        <input type="radio" id="shipyardSusp" name="shipyard">
+        <label for="shipyardOnline">Suspended</label>
+        <input type="radio" id="shipyardOn" name="shipyard" >
+        <label for="shipyardSusp">Online</label>
+      </form>
+      <form>
+        <p>Outfitting</p>
+           <input type="radio" id="outfitOff" name="outfit" checked="true">
+        <label for="outfitOff">Off</label>
+        <input type="radio" id="outfitSusp" name="outfit">
+        <label for="outfitOnline">Suspended</label>
+        <input type="radio" id="outfitOn" name="outfit" >
+        <label for="outfitSusp">Online</label>
       </form>
       <button id="updater">Update Values</button>
     </form>
@@ -35,7 +71,10 @@
     
     
     
-    <p>Upkeep: <span id="upkeepTotal"></span> cr
+    <p>Cost: <span id="costTotal">0</span> cr</p>
+    <p>Upkeep: <span id="upkeepTotal">0</span> cr</p>
+    <p>Space Remaining: <span id="unusedMass">25,000</span>t</p>
+
     <script src="sketch.js"></script>
   </body>
 </html>
