@@ -34,6 +34,18 @@ const secWareOn = document.querySelector("input#secWareOn")
 const uniCartOff = document.querySelector("input#uniCartOff")
 const uniCartSus = document.querySelector("input#uniCartSusp")
 const uniCartOn = document.querySelector("input#uniCartOn")
+//bar
+const barOff = document.querySelector("input#barOff")
+const barSus = document.querySelector("input#barSusp")
+const barOn = document.querySelector("input#barOn")
+//vista genomics
+const vistaGenOff = document.querySelector("input#vistaGenOff")
+const vistaGenSus = document.querySelector("input#vistaGenSusp")
+const vistaGenOn = document.querySelector("input#vistaGenOn")
+//pioneer supplies
+const pioSuppliesOff = document.querySelector("input#pioSuppliesOff")
+const pioSuppliesSus = document.querySelector("input#pioSuppliesSusp")
+const pioSuppliesOn = document.querySelector("input#pioSuppliesOn")
 //begin numerical vars
  let totalUpkeep = (0).toLocaleString('en')
  let totalCost = 0
@@ -93,9 +105,9 @@ update.onclick = () => {
   outfitting();
   secureWarehouse();
   uniCart();
-  //reserved for bar
-  //reserved for VistaGen
-  //reserved for PioSupp 
+  bar();
+  vistaGen();
+  pioSupplies(); 
   updater();
 }
 //function definitions
@@ -259,5 +271,62 @@ function uniCart() { //all settings related to the universal cartographics modul
       else {
       uniCartCost = 0
       uniCartSpace = 0
+  }
+}
+function bar() { //all settings related to the bar module
+  if (barSus.checked == true) {
+    barUpkeep = 1250000
+  }
+  if (barOn.checked == true) {
+    barUpkeep = 1750000
+  }
+  if (barOff.checked == true) {
+    barUpkeep = 0
+  }
+  if (barOff.checked != true) {
+    barCost = 200000000
+    barSpace = 150
+  }
+      else {
+      barCost = 0
+      barSpace = 0
+  }
+}
+function vistaGen() { //all settings related to the vista genomics module
+  if (vistaGenSus.checked == true) {
+    vistaGenUpkeep = 700000
+  }
+  if (vistaGenOn.checked == true) {
+    vistaGenUpkeep = 1500000
+  }
+  if (vistaGenOff.checked == true) {
+    vistaGenUpkeep = 0
+  }
+  if (vistaGenOff.checked != true) {
+    vistaGenCost = 150000000
+    vistaGenSpace = 120
+  }
+      else {
+      vistaGenCost = 0
+      vistaGenSpace = 0
+  }
+}
+function pioSupplies() { //all settings related to the pioneer supplies module
+  if (pioSuppliesSus.checked == true) {
+    pioSuppliesUpkeep = 1500000
+  }
+  if (pioSuppliesOn.checked == true) {
+    pioSuppliesUpkeep = 5000000
+  }
+  if (pioSuppliesOff.checked == true) {
+    pioSuppliesUpkeep = 0
+  }
+  if (pioSuppliesOff.checked != true) {
+    pioSuppliesCost = 250000000
+    pioSuppliesSpace = 200
+  }
+      else {
+      pioSuppliesCost = 0
+      pioSuppliesSpace = 0
   }
 }
