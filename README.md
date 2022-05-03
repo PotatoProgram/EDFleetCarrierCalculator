@@ -3,7 +3,7 @@ This is literally just a recreation of the calculator on the cmdr's toolbox webs
 #### Update 1 ####
 - All non-Odyssey modules are functional
 - Mass calculation is bugged out (low-priority, will fix upon implementation of odyssey modules)
-- Cost does not include fleet carrier purchase cost (5,000,000,000 cr)
+- Cost does not include fleet carrier purchase cost (5,000,000,000 cr), or core services upkeep (5,000,000 cr)
 ##### Todo #####
 - QoL on module status toggles
 - implement Odyssey modules (duh)
