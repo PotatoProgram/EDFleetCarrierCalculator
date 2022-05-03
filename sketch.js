@@ -26,8 +26,16 @@ const shipyardOn = document.querySelector("input#shipyardOn")
 const outfitOff = document.querySelector("input#outfitOff")
 const outfitSus = document.querySelector("input#outfitSusp")
 const outfitOn = document.querySelector("input#outfitOn")
+//black market
+const secWareOff = document.querySelector("input#secWareOff")
+const secWareSus = document.querySelector("input#secWareSusp")
+const secWareOn = document.querySelector("input#secWareOn")
+//universal cartographics
+const uniCartOff = document.querySelector("input#uniCartOff")
+const uniCartSus = document.querySelector("input#uniCartSusp")
+const uniCartOn = document.querySelector("input#uniCartOn")
 //begin numerical vars
- let totalUpkeep = 0
+ let totalUpkeep = (0).toLocaleString('en')
  let totalCost = 0
  let totalOccupiedSpace = 0
  //refuel 
@@ -83,27 +91,23 @@ update.onclick = () => {
   intFac();
   shipyard();
   outfitting();
-  //reserved for black market
-  //reserved for UniCart
+  secureWarehouse();
+  uniCart();
   //reserved for bar
   //reserved for VistaGen
   //reserved for PioSupp 
   updater();
 }
-
-
-
-
+//function definitions
 function updater() { //onclick events for upkeep
-  totalUpkeep = refuelUpkeep+repairUpkeep+restockUpkeep+intFacUpkeep+shipyardUpkeep+outfitUpkeep+secWareUpkeep+uniCartUpkeep+barUpkeep+vistaGenUpkeep+pioSuppliesUpkeep
-  totalCost = refuelCost+repairCost+restockCost+intFacCost+shipyardCost+outfitCost+secWareCost+uniCartCost+barCost+vistaGenCost+pioSuppliesCost
-  totalOccupiedSpace = refuelSpace+repairSpace+restockSpace+intFacSpace+shipyardSpace+outfitSpace+secWareSpace+uniCartSpace+barSpace+vistaGenSpace+pioSuppliesSpace
+  totalUpkeep = (refuelUpkeep+repairUpkeep+restockUpkeep+intFacUpkeep+shipyardUpkeep+outfitUpkeep+secWareUpkeep+uniCartUpkeep+barUpkeep+vistaGenUpkeep+pioSuppliesUpkeep).toLocaleString('en')
+  totalCost = (refuelCost+repairCost+restockCost+intFacCost+shipyardCost+outfitCost+secWareCost+uniCartCost+barCost+vistaGenCost+pioSuppliesCost).toLocaleString('en')
+  totalOccupiedSpace = (refuelSpace+repairSpace+restockSpace+intFacSpace+shipyardSpace+outfitSpace+secWareSpace+uniCartSpace+barSpace+vistaGenSpace+pioSuppliesSpace).toLocaleString('en')
   cost.innerHTML = totalCost
   upkeep.innerHTML = totalUpkeep
   space.innerHTML = totalOccupiedSpace
   
 }  
-
 function refuel() { //all settings related to the Refuel module
   if (refuelSus.checked == true) {
     refuelUpkeep = 750000
@@ -217,5 +221,43 @@ function outfitting() { //all settings related to the outfitting module
       else {
       outfitCost = 0
       outfitSpace = 0
+  }
+}
+function secureWarehouse() { //all settings related to the secure warehouse module
+  if (secWareSus.checked == true) {
+    secWareUpkeep = 1250000
+  }
+  if (secWareOn.checked == true) {
+    secWareUpkeep = 2000000
+  }
+  if (secWareOff.checked == true) {
+    secWareUpkeep = 0
+  }
+  if (secWareOff.checked != true) {
+    secWareCost = 165000000
+    secWareSpace = 250
+  }
+      else {
+      secWareCost = 0
+      secWareSpace = 0
+  }
+}
+function uniCart() { //all settings related to the universal cartographics module
+  if (uniCartSus.checked == true) {
+    uniCartUpkeep = 700000
+  }
+  if (uniCartOn.checked == true) {
+    uniCartUpkeep = 1850000
+  }
+  if (uniCartOff.checked == true) {
+    uniCartUpkeep = 0
+  }
+  if (uniCartOff.checked != true) {
+    uniCartCost = 150000000
+    uniCartSpace = 120
+  }
+      else {
+      uniCartCost = 0
+      uniCartSpace = 0
   }
 }
