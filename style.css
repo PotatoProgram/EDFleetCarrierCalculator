@@ -1,10 +1,26 @@
 body {
   background-color: rgb(36,36,36);
-  color:white
+  font-family: Arial;
+  color: rgb(168,168,168)
 }
 
 h1 {
   color:#CE8214;
-  font-family: Arial;
+  font-family: Arial
   font-size: 175%
+}
+
+p {
+  margin: auto;
+  padding: 15px
+}
+
+img {
+  float: left;  
+  display: block;
+  margin: 10px
+}
+
+a {
+  color: rgb(60,69,214)
 }
