@@ -1,5 +1,5 @@
 # EDFleetCarrierCalculator #
-This is literally just a recreation of the calculator on the cmdr's toolbox website that i made so I can bypass the school blocks should the website get blocked
+This is literally just a mirror of the calculator on the cmdr's toolbox website that i made so I can bypass the school blocks should the website get blocked
 #### Update 1 ####
 - Cost does not include fleet carrier purchase cost (5,000,000,000 cr), or core services upkeep (5,000,000 cr)
 ##### Todo #####
