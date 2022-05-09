@@ -5,7 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
-
+    <title>ED Fleet Carrier Calculator</title>
   </head>
   <body>
     <h1> Elite Dangerous Fleet Carrier Calculator</h1>
@@ -39,6 +39,7 @@
         <label for="restockSusp">Online</label>
       </form>
       <form>
+        <img src="images\Combat-Bonds.png" width="30">
         <p>Redemption Office</p>
            <input type="radio" id="intFacOff" name="intFac" checked="true">
         <label for="intFacOff">Off</label>
@@ -48,7 +49,7 @@
         <label for="intFacSusp">Online</label>
       </form>
       <form>
-        <p>Shipyard</p>
+        <p>Shipyard <span id="freeAccessShipyard" style="text-decoration: underline">(?)</span></p>
            <input type="radio" id="shipyardOff" name="shipyard" checked="true">
         <label for="shipyardOff">Off</label>
         <input type="radio" id="shipyardSusp" name="shipyard">
@@ -57,7 +58,7 @@
         <label for="shipyardSusp">Online</label>
       </form>
       <form>
-        <p>Outfitting</p>
+        <p>Outfitting <span id="freeAccessOutfit" style="text-decoration: underline">(?)</span></p>
            <input type="radio" id="outfitOff" name="outfit" checked="true">
         <label for="outfitOff">Off</label>
         <input type="radio" id="outfitSusp" name="outfit">
@@ -75,7 +76,7 @@
         <label for="secWareSusp">Online</label>
       </form>
       <form>
-        <p>Universal Cartographics</p>
+        <img src="images\Universal-Cartographics.png" width="23"><p>Universal Cartographics</p> 
            <input type="radio" id="uniCartOff" name="uniCart" checked="true">
         <label for="uniCartOff">Off</label>
         <input type="radio" id="uniCartSusp" name="uniCart">
@@ -110,12 +111,15 @@
         <input type="radio" id="pioSuppliesOn" name="pioSupplies" >
         <label for="pioSuppliesSusp">Online</label>
       </form>
-      <button id="updater">Update Values</button>
+      <button id="updater" style="margin:10px">Update Values</button>
     </form>
     <p>Cost: <span id="costTotal">0</span> cr</p>
     <p>Upkeep: <span id="upkeepTotal">0</span> cr</p>
     <p>Space Remaining: <span id="unusedMass">25,000</span>t</p>
-
+    <p style="text-align:center; font-size: 60%">
+      Elite: Dangerous is the property of Frontier Developments, and the images for Redemption Office and Universal Cartographics were sourced from 
+      <a href="edassets.org">edassets.org</a>
+      . No copyright infringment intended.</p>
     <script src="sketch.js"></script>
   </body>
 </html>
