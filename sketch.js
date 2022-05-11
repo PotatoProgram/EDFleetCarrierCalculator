@@ -1,13 +1,10 @@
-const ownerAccOutfit = 
-      document.querySelector("span#freeAccessOutfit");
-const ownerAccShip = 
-      document.querySelector("span#freeAccessShipyard");
 const update = document.querySelector("button#updater");
 const upkeep = document.querySelector("span#upkeepTotal");
+const upkeepMonth = document.querySelector("span#upkeepMonth");
+const upkeepYear = document.querySelector("span#upkeepYear");
+const costModules = document.querySelector("span#moduleCost");
 const cost = document.querySelector("span#costTotal");
 const space = document.querySelector("span#unusedMass");
-const hoverShip = document.querySelector("span#freeAccessShipyard");
-const hoverOutfit = document.querySelector("span#freeAccessOutfit");
 //refuel
 const refuelOff = document.querySelector("input#refuelOff");
 const refuelSus = document.querySelector("input#refuelSusp");
@@ -25,10 +22,14 @@ const intFacOff = document.querySelector("input#intFacOff");
 const intFacSus = document.querySelector("input#intFacSusp");
 const intFacOn = document.querySelector("input#intFacOn");
 //shipyard
+const ownerAccShip = 
+      document.querySelector("span#freeAccessShipyard");
 const shipyardOff = document.querySelector("input#shipyardOff");
 const shipyardSus = document.querySelector("input#shipyardSusp");
 const shipyardOn = document.querySelector("input#shipyardOn");
 //outfitting
+const ownerAccOutfit = 
+      document.querySelector("span#freeAccessOutfit");
 const outfitOff = document.querySelector("input#outfitOff");
 const outfitSus = document.querySelector("input#outfitSusp");
 const outfitOn = document.querySelector("input#outfitOn");
@@ -49,13 +50,14 @@ const vistaGenOff = document.querySelector("input#vistaGenOff");
 const vistaGenSus = document.querySelector("input#vistaGenSusp");
 const vistaGenOn = document.querySelector("input#vistaGenOn");
 //pioneer supplies
-const pioSuppliesOff = document.querySelector("input#pioSuppliesOff");
-const pioSuppliesSus = document.querySelector("input#pioSuppliesSusp");
+const pioSuppliesOff = 
+      document.querySelector("input#pioSuppliesOff");
+const pioSuppliesSus = 
+      document.querySelector("input#pioSuppliesSusp");
 const pioSuppliesOn = document.querySelector("input#pioSuppliesOn");
+//jumps per week
+const jumps = document.querySelector("input#jumps");
 //begin numerical vars
-let totalUpkeep = (0).toLocaleString("en");
-let totalCost = 0;
-let totalOccupiedSpace = 0;
 //refuel
 let refuelUpkeep = 0;
 let refuelCost = 0;
@@ -119,23 +121,30 @@ update.onclick = () => {
 //end function calls
 //begin onhover events
 ownerAccOutfit.onmouseover = () => {
-  ownerAccOutfit.innerHTML = "This service is available to owners, regardless of module status"
-}
+  ownerAccOutfit.innerHTML =
+    "(This service is available to owners, regardless of module status)";
+};
 ownerAccOutfit.onmouseout = () => {
-  ownerAccOutfit.innerHTML = "(?)"
-}
+  ownerAccOutfit.innerHTML = "(?)";
+};
 ownerAccShip.onmouseover = () => {
-  ownerAccShip.innerHTML = 
-    "(This service is always available to owners, regardless of module status, but the concourse service will only appear if the module is online)"
-}
+  ownerAccShip.innerHTML =
+    "(This service is always available to owners, regardless of module status, but the concourse service will only appear if the module is online)";
+};
 ownerAccShip.onmouseout = () => {
-  ownerAccShip.innerHTML = "(?)"
-}
+  ownerAccShip.innerHTML = "(?)";
+};
 //end onhover events
 //function definitions
 function updater() {
+  let totalUpkeep = 0;
+  let totalCost = 0;
+  let totalOccupiedSpace = 0;
+  let monthlyUpkeep = 0;
+  let yearlyUpkeep = 0;
+  let moduleCost = 0;
   //onclick events for upkeep
-  totalUpkeep = (
+  totalUpkeep =
     refuelUpkeep +
     repairUpkeep +
     restockUpkeep +
@@ -146,9 +155,12 @@ function updater() {
     uniCartUpkeep +
     barUpkeep +
     vistaGenUpkeep +
-    pioSuppliesUpkeep
-  ).toLocaleString("en");
-  totalCost = (
+    pioSuppliesUpkeep +
+    (jumps.value*100000) +
+    5000000;
+  monthlyUpkeep = totalUpkeep * 4.345;
+  yearlyUpkeep = totalUpkeep * 52.143;
+  totalCost =
     refuelCost +
     repairCost +
     restockCost +
@@ -159,9 +171,10 @@ function updater() {
     uniCartCost +
     barCost +
     vistaGenCost +
-    pioSuppliesCost
-  ).toLocaleString("en");
-  totalOccupiedSpace = (
+    pioSuppliesCost +
+    5000000000;
+  moduleCost = totalCost - 5000000000;
+  totalOccupiedSpace =
     25000 -
     (refuelSpace +
       repairSpace +
@@ -173,11 +186,13 @@ function updater() {
       uniCartSpace +
       barSpace +
       vistaGenSpace +
-      pioSuppliesSpace)
-  ).toLocaleString("en");
-  cost.innerHTML = totalCost;
-  upkeep.innerHTML = totalUpkeep;
-  space.innerHTML = totalOccupiedSpace;
+      pioSuppliesSpace);
+  cost.innerHTML = totalCost.toLocaleString("en");
+  costModules.innerHTML = moduleCost.toLocaleString("en");
+  upkeep.innerHTML = totalUpkeep.toLocaleString("en");
+  upkeepMonth.innerHTML = monthlyUpkeep.toLocaleString("en");
+  upkeepYear.innerHTML = yearlyUpkeep.toLocaleString("en");
+  space.innerHTML = totalOccupiedSpace.toLocaleString("en");
 }
 function refuel() {
   //all settings related to the Refuel module
