@@ -3,123 +3,196 @@
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset="utf-8" />
     <title>ED Fleet Carrier Calculator</title>
   </head>
   <body>
-    <h1> Elite Dangerous Fleet Carrier Calculator</h1>
+    <h1>Elite Dangerous Fleet Carrier Calculator</h1>
     <h3>Select services:</h3>
     <form id="services">
       <form>
         <p>Refuel/Refuel Station</p>
-           <input type="radio" id="refuelOff" name="refuel" checked="true">
+        <input type="radio" id="refuelOff" name="refuel"
+               checked="true" />
         <label for="refuelOff">Off</label>
-        <input type="radio" id="refuelSusp" name="refuel">
+        <input type="radio" id="refuelSusp" name="refuel" />
         <label for="refuelOnline">Suspended</label>
-        <input type="radio" id="refuelOn" name="refuel" >
+        <input type="radio" id="refuelOn" name="refuel" />
         <label for="refuelSusp">Online</label>
       </form>
       <form>
         <p>Repair/Repair Crews</p>
-           <input type="radio" id="repairOff" name="repair" checked="true">
+        <input type="radio" id="repairOff" name="repair" 
+               checked="true" />
         <label for="repairOff">Off</label>
-        <input type="radio" id="repairSusp" name="repair">
+        <input type="radio" id="repairSusp" name="repair" />
         <label for="repairOnline">Suspended</label>
-        <input type="radio" id="repairOn" name="repair">
+        <input type="radio" id="repairOn" name="repair" />
         <label for="repairSusp">Online</label>
       </form>
       <form>
         <p>Restock/Armoury</p>
-           <input type="radio" id="restockOff" name="restock" checked="true">
+        <input type="radio" id="restockOff" name="restock"
+               checked="true" />
         <label for="restockOff">Off</label>
-        <input type="radio" id="restockSusp" name="restock">
+        <input type="radio" id="restockSusp" name="restock" 
+               />
         <label for="restockOnline">Suspended</label>
-        <input type="radio" id="restockOn" name="restock">
+        <input type="radio" id="restockOn" name="restock" />
         <label for="restockSusp">Online</label>
       </form>
       <form>
-        <img src="images\Combat-Bonds.png" width="30">
+        <img src="images\Combat-Bonds.png" width="30" />
         <p>Redemption Office</p>
-           <input type="radio" id="intFacOff" name="intFac" checked="true">
+        <input type="radio" id="intFacOff" name="intFac"
+               checked="true" />
         <label for="intFacOff">Off</label>
-        <input type="radio" id="intFacSusp" name="intFac">
+        <input type="radio" id="intFacSusp" name="intFac" />
         <label for="intFacOnline">Suspended</label>
-        <input type="radio" id="intFacOn" name="intFac" >
+        <input type="radio" id="intFacOn" name="intFac" />
         <label for="intFacSusp">Online</label>
       </form>
       <form>
-        <p>Shipyard <span id="freeAccessShipyard" style="text-decoration: underline">(?)</span></p>
-           <input type="radio" id="shipyardOff" name="shipyard" checked="true">
+        <img src="images\condor.png" width="21" 
+             style="transform:rotate(45deg);" />
+        <p>
+          Shipyard
+          <span id="freeAccessShipyard" 
+                style="text-decoration: underline"
+            >(?)</span
+          >
+        </p>
+        <input type="radio" id="shipyardOff" name="shipyard" 
+               checked="true" />
         <label for="shipyardOff">Off</label>
-        <input type="radio" id="shipyardSusp" name="shipyard">
+        <input type="radio" id="shipyardSusp" 
+               name="shipyard" />
         <label for="shipyardOnline">Suspended</label>
-        <input type="radio" id="shipyardOn" name="shipyard" >
+        <input type="radio" id="shipyardOn" name="shipyard" 
+               />
         <label for="shipyardSusp">Online</label>
       </form>
       <form>
-        <p>Outfitting <span id="freeAccessOutfit" style="text-decoration: underline">(?)</span></p>
-           <input type="radio" id="outfitOff" name="outfit" checked="true">
+        <img src="images\ed-turret.png" width="40" />
+        <p>
+          Outfitting
+          <span id="freeAccessOutfit" 
+                style="text-decoration: underline"
+            >(?)</span
+          >
+        </p>
+        <input type="radio" id="outfitOff" name="outfit" 
+               checked="true" />
         <label for="outfitOff">Off</label>
-        <input type="radio" id="outfitSusp" name="outfit">
+        <input type="radio" id="outfitSusp" name="outfit" />
         <label for="outfitOnline">Suspended</label>
-        <input type="radio" id="outfitOn" name="outfit" >
+        <input type="radio" id="outfitOn" name="outfit" />
         <label for="outfitSusp">Online</label>
       </form>
       <form>
+        <img src="images\Covert.png" width="21" />
         <p>Secure Warehouse</p>
-           <input type="radio" id="secWareOff" name="secWare" checked="true">
+        <input type="radio" id="secWareOff" name="secWare" 
+               checked="true" />
         <label for="secWareOff">Off</label>
-        <input type="radio" id="secWareSusp" name="secWare">
+        <input type="radio" id="secWareSusp" name="secWare" 
+               />
         <label for="secWareOnline">Suspended</label>
-        <input type="radio" id="secWareOn" name="secWare" >
+        <input type="radio" id="secWareOn" name="secWare" />
         <label for="secWareSusp">Online</label>
       </form>
       <form>
-        <img src="images\Universal-Cartographics.png" width="23"><p>Universal Cartographics</p> 
-           <input type="radio" id="uniCartOff" name="uniCart" checked="true">
+        <img src="images\Universal-Cartographics.png" 
+             width="23" />
+        <p>Universal Cartographics</p>
+        <input type="radio" id="uniCartOff" name="uniCart" 
+               checked="true" />
         <label for="uniCartOff">Off</label>
-        <input type="radio" id="uniCartSusp" name="uniCart">
+        <input type="radio" id="uniCartSusp" name="uniCart" 
+               />
         <label for="uniCartOnline">Suspended</label>
-        <input type="radio" id="uniCartOn" name="uniCart" >
+        <input type="radio" id="uniCartOn" name="uniCart" />
         <label for="uniCartSusp">Online</label>
       </form>
       <form>
-        <p>Bar (Odyssey Material Trader) [Concourse/Odyssey]</p>
-           <input type="radio" id="barOff" name="bar" checked="true">
+        <img src="images\Engineer_icon.png" width="24" />
+        <p>Bar (Odyssey Material Trader) 
+          [Concourse/Odyssey]
+        </p>
+        <input type="radio" id="barOff" name="bar" 
+               checked="true" />
         <label for="barOff">Off</label>
-        <input type="radio" id="barSusp" name="bar">
+        <input type="radio" id="barSusp" name="bar" />
         <label for="barOnline">Suspended</label>
-        <input type="radio" id="barOn" name="bar" >
+        <input type="radio" id="barOn" name="bar" />
         <label for="barSusp">Online</label>
       </form>
       <form>
+        <img src="images\organic-structure.png" width="28" 
+             />
         <p>Vista Genomics [Concourse/Odyssey]</p>
-           <input type="radio" id="vistaGenOff" name="vistaGen" checked="true">
+        <input type="radio" id="vistaGenOff" name="vistaGen" 
+               checked="true" />
         <label for="vistaGenOff">Off</label>
-        <input type="radio" id="vistaGenSusp" name="vistaGen">
+        <input type="radio" id="vistaGenSusp" 
+               name="vistaGen" />
         <label for="vistaGenOnline">Suspended</label>
-        <input type="radio" id="vistaGenOn" name="vistaGen" >
+        <input type="radio" id="vistaGenOn" name="vistaGen" 
+               />
         <label for="vistaGenSusp">Online</label>
       </form>
       <form>
-        <p>Pioneer Supplies (Suit/Weapon/Consumable Shop) [Concourse/Odyssey]</p>
-           <input type="radio" id="pioSuppliesOff" name="pioSupplies" checked="true">
+        <img src="images\surface.png" width="29" />
+        <p>
+          Pioneer Supplies (Suit/Weapon/Consumable Shop) 
+          [Concourse/Odyssey]
+        </p>
+        <input
+          type="radio"
+          id="pioSuppliesOff"
+          name="pioSupplies"
+          checked="true"
+        />
         <label for="pioSuppliesOff">Off</label>
-        <input type="radio" id="pioSuppliesSusp" name="pioSupplies">
+        <input type="radio" id="pioSuppliesSusp" 
+               name="pioSupplies" />
         <label for="pioSuppliesOnline">Suspended</label>
-        <input type="radio" id="pioSuppliesOn" name="pioSupplies" >
+        <input type="radio" id="pioSuppliesOn" 
+               name="pioSupplies" />
         <label for="pioSuppliesSusp">Online</label>
-      </form>
-      <button id="updater" style="margin:10px">Update Values</button>
+      </form><br>
+      <label for="jumps">Jumps per week (expected)</label>
+      <input id="jumps" type="number" min="0"> <br>
+      <button id="updater" style="margin:15px">
+        Update Values</button>
     </form>
-    <p>Cost: <span id="costTotal">0</span> cr</p>
-    <p>Upkeep: <span id="upkeepTotal">0</span> cr</p>
-    <p>Space Remaining: <span id="unusedMass">25,000</span>t</p>
+    <p>Cost+carrier purchase: <span id="costTotal"> 
+      5,000,000,000 </span> cr</p>
+    <p>Installation cost of modules: 
+      <span id="moduleCost">
+      0
+      </span> cr</p>
+    <p>Weekly Upkeep: <span id="upkeepTotal">
+      5,000,000</span> 
+      cr</p>
+    <p>Monthly Upkeep: <span id="upkeepMonth">
+      20,000,000</span> cr</p>
+    <p>Yearly Upkeep: <span id="upkeepYear">
+      208,000,000 </span> cr</p>
+    <p>Space Remaining: <span 
+                          id="unusedMass">
+      25,000
+      </span>
+      t
+    </p>
     <p style="text-align:center; font-size: 60%">
-      Elite: Dangerous is the property of Frontier Developments, and the images for Redemption Office and Universal Cartographics were sourced from 
+      Elite: Dangerous is the property of Frontier 
+      Developments, and the icons
+      are sourced from
       <a href="edassets.org">edassets.org</a>
-      . No copyright infringment intended.</p>
+      . No copyright infringment intended.
+    </p>
     <script src="sketch.js"></script>
   </body>
 </html>
