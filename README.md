@@ -1,6 +1,7 @@
 # EDFleetCarrierCalculator #
 This is literally just a mirror of the calculator on the cmdr's toolbox website that i made so I can bypass the school blocks should the website get blocked
-**DON'T USE THE RELEASE. USE THE WEBSITE.**
+<br>**DON'T USE THE RELEASE. USE THE WEBSITE.**<br>
+I can't promise the release files will work as intended. If that doesn't convince you, I can't promise that the code doesn't have security vulnerabilities.
 ## Main Release Patch Notes ##
 #### New features ####
 - Monthly upkeep is now calculated
