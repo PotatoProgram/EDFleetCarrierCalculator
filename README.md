@@ -1,6 +1,6 @@
 # EDFleetCarrierCalculator #
 This is literally just a mirror of the calculator on the cmdr's toolbox website that i made so I can bypass the school blocks should the website get blocked
-<br>**DON'T USE THE RELEASE. USE THE WEBSITE.**<br>
+<br>**DON'T USE THE RELEASE. [USE THE WEBSITE](https://potatoprogram.github.io/EDFleetCarrierCalculator/).**<br>
 I can't promise the release files will work as intended. I only made the release because I felt like it
 ## Main Release Patch Notes ##
 #### New features ####
