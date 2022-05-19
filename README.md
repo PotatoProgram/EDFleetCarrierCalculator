@@ -13,3 +13,8 @@ I can't promise the release files will work as intended. I only made the release
 - Module fitting cost is now located under "Installation Cost of Modules"
 - Module-only upkeep will not be calculated as there is no instance of upkeep without core service upkeep
 - Images have now been added to all modules with the exception of the Refuel, Repair and Restock modules
+
+#### Coming Soon (maybe) ####
+- Individual module cost, displayed ideally next to the modules themselves. 
+- More integrations of features from [this sheet](https://docs.google.com/spreadsheets/d/18rJ1p0ll9vW0nf1A-YHD47FT4lFm72JbiSnIWsRfVsg/edit?usp=sharing)
+- More features from the ideas section of [this](https://github.com/PotatoProgram/EDFleetCarrierCalculator/projects/1)
