@@ -2,6 +2,7 @@
 This is literally just a mirror of the calculator on the cmdr's toolbox website that i made so I can bypass the school blocks should the website get blocked
 <br>**DON'T USE THE RELEASE. [USE THE WEBSITE](https://potatoprogram.github.io/EDFleetCarrierCalculator/).**<br>
 I can't promise the release files will work as intended. I only made the release because I felt like it
+I also made this for a school assignment, and while I am rather impressed with myself, it probably won't represent my best work for much longer
 ## Main Release Patch Notes ##
 #### New features ####
 - Monthly upkeep is now calculated
